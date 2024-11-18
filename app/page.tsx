@@ -1,12 +1,9 @@
 // component import
-import NavLink from "@/app/component/navbar/navlink";
 import A_Accordion from "@/app/component/accordion/accordion";
 // icon import
 import {
   ArrowRightAlt,
   Instagram,
-  SearchOutlined,
-  ShoppingBagOutlined,
   Facebook,
   YouTube,
 } from "@mui/icons-material";

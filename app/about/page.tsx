@@ -1,13 +1,7 @@
 // component import
 import NavLink from "@/app/component/navbar/navlink";
 // icon import
-import {
-  Facebook,
-  Instagram,
-  SearchOutlined,
-  ShoppingBagOutlined,
-  YouTube,
-} from "@mui/icons-material";
+import { Facebook, Instagram, YouTube } from "@mui/icons-material";
 import XIcon from "@mui/icons-material/X";
 
 // image import

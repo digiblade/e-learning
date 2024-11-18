@@ -3,7 +3,6 @@ import React from "react";
 // component import
 import NavLink from "@/app/component/navbar/navlink";
 // icon import
-import { SearchOutlined, ShoppingBagOutlined } from "@mui/icons-material";
 
 import star from "@/public/assets/images/star.png";
 import lesson from "@/public/assets/images/lesson.png";
