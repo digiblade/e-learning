@@ -22,72 +22,25 @@ import like from "@/public/assets/images/like.png";
 import book from "@/public/assets/images/book.png";
 
 import mapPattern from "@/public/assets/images/mapPattern.png";
-import timeline from "@/public/assets/images/timeline2.png";
+import timeline from "@/public/assets/images/timeline.png";
 
 import ai from "@/public/assets/images/ai.png";
 import ux from "@/public/assets/images/UX.png";
 import web from "@/public/assets/images/web.png";
 import graphics from "@/public/assets/images/graphics.png";
+import Navbar from "../component/navbar/navbar";
 export default function Home() {
   return (
-    <div className="bg-white">
-      <div className=" py-4 flex flex-col bg-gradient-60 from-[#303d65] via-[#2C313B] to-[#48372c] via-60% to-70% ">
-        <div className="flex justify-between item-enter p-3 px-16 ">
-          <div className="">
-            <span className="text-primaryYellow">475092+ </span>
-            No. of Students Counselled
-          </div>
-          <div className="">
-            <span className="text-primaryYellow">475092+ </span>
-            No. of Assisted in Placement
-          </div>
-        </div>
-        <hr className="bg-gray-50 h-[1px] opacity-15" />
-        <div className="flex flex-col justify-center items-between h-full">
-          <div className="flex justify-between items-center px-4">
-            <div className="logo">
-              <img
-                src="https://wayspire.in/wp-content/uploads/2023/09/new-logo-wayspire-copy-600x315-removebg-preview.png"
-                alt="Logo"
-                className="h-24"
-              />
-            </div>
-            <div className="redirection flex gap-4 item-center justify-center">
-              <NavLink url="/" title={"Home"} showArrow={true} />
-              <NavLink url="/courses" title={"Program"} showArrow={true} />
-              <NavLink url="/career" title={"Career"} showArrow={true} />
-              <NavLink
-                url="/contact-us"
-                title={"Contact Us"}
-                showArrow={false}
-              />
-              <NavLink url="about" title={"About"} showArrow={false} />
-              <NavLink url="blogs" title={"Blogs"} showArrow={false} />
-            </div>
-            <div className="auth flex gap-4 items-center">
-              <div className="search">
-                <SearchOutlined />
-              </div>
-              <div className="cart">
-                <ShoppingBagOutlined />
-              </div>
-              <div className="btn-auth bg-primaryYellow px-4 py-1 rounded-full font-semibold flex items-center gap-1 text-black">
-                Sign in →
-              </div>
-            </div>
-          </div>
-          {/* Banner part  */}
-          <div className=" px-24  flex flex-col text-center gap-4 justify-between items-center py-16">
-            <div className="text-4xl font-semibold">About Us</div>
-            <div className="flex gap-4">
-              <NavLink url="/" title="Home" />-<NavLink url="/" title="Pages" />
-              -<NavLink url="/" title="About Us" />
-            </div>
-          </div>
+    <div className="">
+      <Navbar />
+      <div className=" px-24  flex flex-col text-center gap-4 justify-between items-center py-16">
+        <div className="text-4xl font-semibold">About Us</div>
+        <div className="flex gap-4">
+          <NavLink url="/" title="Home" />-<NavLink url="/" title="Pages" />
+          -<NavLink url="/" title="About Us" />
         </div>
       </div>
-
-      <div className="section1 px-24 my-16 mb-16 flex justify-between items-center">
+      <div className="section1 px-24 my-16 flex justify-between items-center">
         <div className="content w-1/2">
           <div className=" text-white ">
             <div className="container mx-auto py-12 ">
@@ -176,16 +129,14 @@ export default function Home() {
           <img src={book.src} alt="" />
         </div>
       </div>
-      <div className="section6 px-24 my-36 py-24 text-center relative bg-gray-200">
+      <div className="section3 px-24 my-36 py-24 text-center relative ">
         <span className="px-8 py-2 border text-secondaryBlue border-secondaryBlue rounded-full">
           Our Story
         </span>
-        <div className="mt-8 text-5xl font-semibold text-black">
-          Our Student Journey
-        </div>
+        <div className="mt-8 text-5xl font-semibold ">Our Student Journey</div>
         <div className="flex mt-16 gap-12 text-left items-center">
           <div className="w-1/2 h-96 bg-white rounded-lg"></div>
-          <div className=" w-1/3 text-black">
+          <div className=" w-1/3 ">
             <span className="text-2xl text-secondaryBlue">2024</span>
             <div className="text-4xl ">
               Presenting one million Joiner Through Online Ai Course Service
@@ -207,7 +158,7 @@ export default function Home() {
           <img src={mapPattern.src} alt="" />
         </div>
       </div>
-      <div className="section5 px-24 my-36 relative text-black">
+      <div className="section4 px-24 my-36 relative ">
         <span className="inline-block  rounded-full bg-secondaryBlue px-8 py-2 my-8 text-white">
           Free Courses
         </span>
@@ -320,7 +271,8 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <footer className="flex px-24 py-24 gap-36 bg-black">
+      <hr />
+      <footer className="flex px-24 py-24 gap-36 ">
         <div className="w-1/4">
           <div className="logo px-0">
             <img

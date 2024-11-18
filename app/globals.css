@@ -6,6 +6,10 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+img {
+  -webkit-user-drag: none; /* For Safari and Chrome */
+  user-drag: none; /* Standard (if supported) */
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,6 +24,8 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   color: var(--foreground);
   background: var(--primary-blue);
   font-family: "Poppins", sans-serif;

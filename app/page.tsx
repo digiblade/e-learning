@@ -44,174 +44,126 @@ import ai from "@/public/assets/images/ai.png";
 import ux from "@/public/assets/images/UX.png";
 import web from "@/public/assets/images/web.png";
 import graphics from "@/public/assets/images/graphics.png";
+import Navbar from "./component/navbar/navbar";
 
 export default function Home() {
   return (
     <div className="">
-      <div className="min-h-screen py-4 flex flex-col bg-gradient-60 from-[#303d65] via-[#2C313B] to-[#48372c] via-60% to-70% ">
-        <div className="flex justify-between item-enter p-3 px-16 ">
-          <div className="">
-            <span className="text-primaryYellow">475092+ </span>
-            No. of Students Counselled
-          </div>
-          <div className="">
-            <span className="text-primaryYellow">475092+ </span>
-            No. of Assisted in Placement
+      <Navbar />
+      {/* Banner part  */}
+      <div className="banner px-24 flex-1 h-full w-full flex gap-16 justify-between items-center py-16 bg-gradient-60 from-[#303d65] via-[#2C313B] to-[#48372c] via-60% to-70% ">
+        <div className="hero-text flex-1">
+          <div className=" ">
+            <div className="tags  my-2 inline  bg-gradient-to-r px-3 py-2 from-secondaryBlue  to-gray-400 rounded-full gap-4 font-medium">
+              <img src={trophy.src} alt="" className="inline" />
+              <div className="inline whitespace-nowrap px-2">Design Course</div>
+            </div>
+
+            <div className="text-9xl font-bold my-2">UI/UX</div>
+            <div className="my-2 text-2xl">
+              There Are Many Variations of Passages Of Lorem Ipsum Available,
+              But The Majority Have Suffered Alteration in Some, Form
+            </div>
+            <button
+              type="submit"
+              className="my-4 bg-orange-500 hover:bg-orange-600 text-black  py-2 px-4 rounded-full cursor-pointer"
+            >
+              View Courses →
+            </button>
           </div>
         </div>
-        <hr className="bg-gray-50 h-[1px] opacity-15" />
-        <div className="flex flex-col justify-center items-between h-full">
-          <div className="flex justify-between items-center px-4">
-            <div className="logo">
-              <img
-                src="https://wayspire.in/wp-content/uploads/2023/09/new-logo-wayspire-copy-600x315-removebg-preview.png"
-                alt="Logo"
-                className="h-24"
-              />
-            </div>
-            <div className="redirection flex gap-4 item-center justify-center">
-              <NavLink url="/" title={"Home"} showArrow={true} />
-              <NavLink url="/courses" title={"Program"} showArrow={true} />
-              <NavLink url="/career" title={"Career"} showArrow={true} />
-              <NavLink
-                url="/contact-us"
-                title={"Contact Us"}
-                showArrow={false}
-              />
-              <NavLink url="about" title={"About"} showArrow={false} />
-              <NavLink url="blogs" title={"Blogs"} showArrow={false} />
-            </div>
-            <div className="auth flex gap-4 items-center">
-              <div className="search">
-                <SearchOutlined />
-              </div>
-              <div className="cart">
-                <ShoppingBagOutlined />
-              </div>
-              <div className="btn-auth bg-primaryYellow px-4 py-1 rounded-full font-semibold flex items-center gap-1 text-black">
-                Sign in →
+        <div className="banner-image relative">
+          <img src={banner.src} alt="" />
+          <div className="h-16 w-16 bg-primaryYellow absolute bottom-4 left-4"></div>
+        </div>
+        <div className="hero-form flex-1 flex flex-col gap-2 justify-center">
+          <div className="inline-flex justify-center">
+            <div className="tags   h-auto  bg-gradient-to-r px-3 py-2 from-secondaryBlue  to-gray-400 rounded-full gap-4 font-medium">
+              <img src={trophy.src} alt="" className="inline" />
+              <div className="inline whitespace-nowrap px-2">
+                Trusted By 1 Crore+ Customers
               </div>
             </div>
           </div>
-          {/* Banner part  */}
-          <div className="banner px-24 flex-1 h-full w-full flex gap-16 justify-between items-center py-16">
-            <div className="hero-text flex-1">
-              <div className=" ">
-                <div className="tags  my-2 inline  bg-gradient-to-r px-3 py-2 from-secondaryBlue  to-gray-400 rounded-full gap-4 font-medium">
-                  <img src={trophy.src} alt="" className="inline" />
-                  <div className="inline whitespace-nowrap px-2">
-                    Design Course
-                  </div>
+          <div className="">
+            <form className="bg-white shadow-md rounded-3xl px-8 py-8 ">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4 w-full text-center py-6">
+                Interested Course?
+              </h2>
+              <div className="flex flex-col gap-4">
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-bold mb-2 ">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-3 py-2 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter Your Name"
+                    required
+                  />
                 </div>
 
-                <div className="text-9xl font-bold my-2">UI/UX</div>
-                <div className="my-2 text-2xl">
-                  There Are Many Variations of Passages Of Lorem Ipsum
-                  Available, But The Majority Have Suffered Alteration in Some,
-                  Form
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-bold mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-3 py-2 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter Your Email Address"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label className="block text-gray-700 font-bold mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-3 py-2 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter Your Phone Number"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <input
+                    type="checkbox"
+                    id="discount"
+                    name="discount"
+                    className="mr-2"
+                  />
+                  <label className="text-gray-700">
+                    Do you have a discount coupon?
+                  </label>
                 </div>
                 <button
                   type="submit"
-                  className="my-4 bg-orange-500 hover:bg-orange-600 text-black  py-2 px-4 rounded-full"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-black  py-2 px-4 rounded-full cursor-pointer"
                 >
-                  View Courses →
+                  Send Message →
                 </button>
               </div>
-            </div>
-            <div className="banner-image relative">
-              <img src={banner.src} alt="" />
-              <div className="h-16 w-16 bg-primaryYellow absolute bottom-4 left-4"></div>
-            </div>
-            <div className="hero-form flex-1 flex flex-col gap-2 justify-center">
-              <div className="inline-flex justify-center">
-                <div className="tags   h-auto  bg-gradient-to-r px-3 py-2 from-secondaryBlue  to-gray-400 rounded-full gap-4 font-medium">
-                  <img src={trophy.src} alt="" className="inline" />
-                  <div className="inline whitespace-nowrap px-2">
-                    Trusted By 1 Crore+ Customers
-                  </div>
-                </div>
-              </div>
-              <div className="">
-                <form className="bg-white shadow-md rounded-3xl px-8 py-8 ">
-                  <h2 className="text-3xl font-bold text-gray-800 mb-4 w-full text-center py-6">
-                    Interested Course?
-                  </h2>
-                  <div className="flex flex-col gap-4">
-                    <div className="mb-4">
-                      <label className="block text-gray-700 font-bold mb-2 ">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="w-full px-3 py-2 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Enter Your Name"
-                        required
-                      />
-                    </div>
-
-                    <div className="mb-4">
-                      <label className="block text-gray-700 font-bold mb-2">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="w-full px-3 py-2 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Enter Your Email Address"
-                        required
-                      />
-                    </div>
-
-                    <div className="mb-4">
-                      <label className="block text-gray-700 font-bold mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="w-full px-3 py-2 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="Enter Your Phone Number"
-                        required
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <input
-                        type="checkbox"
-                        id="discount"
-                        name="discount"
-                        className="mr-2"
-                      />
-                      <label className="text-gray-700">
-                        Do you have a discount coupon?
-                      </label>
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full bg-orange-500 hover:bg-orange-600 text-black  py-2 px-4 rounded-full"
-                    >
-                      Send Message →
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-      <div className="section1 flex p-24 justify-between gap-16 ">
+      <div className="section1 flex p-24 justify-between gap-16  ">
         <div className="section-text ">
           <h1 className="text-6xl">What We Offer</h1>
           <div className="text-4xl mt-12">
             It&apos;s All About Design Courses.
           </div>
           <div className="text-4xl mb-12">Because Thats What We Do.</div>
-          <div className="inline-flex bg-primaryYellow px-4 py-2 rounded-full  items-center gap-1 text-black">
+          <button className="inline-flex bg-primaryYellow px-4 py-2 rounded-full  items-center gap-1 text-black">
             Explore More →
-          </div>
+          </button>
         </div>
         <div className="section-cards flex-1">
           <div className="flex flex-col md:flex-row gap-4 min-h-96">
@@ -423,7 +375,7 @@ export default function Home() {
               </div>
 
               <div className="mt-12 mx-6">
-                <button className="bg-primaryYellow text-black   font-bold py-2 px-8 rounded-full">
+                <button className="bg-primaryYellow text-black   font-bold py-2 px-8 rounded-full cursor-pointer">
                   Explore More →
                 </button>
               </div>
@@ -445,7 +397,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-right w-1/2">
-            <button className="bg-primaryYellow rounded-full text-black px-6 py-2">
+            <button className="bg-primaryYellow rounded-full text-black px-6 py-2 cursor-pointer">
               View All Instructors →
             </button>
           </div>
@@ -637,6 +589,7 @@ export default function Home() {
         </div>
         <img className="absolute -z-10" src={upperFooter.src} alt="" />
       </div>
+      <hr />
       <footer className="flex px-24 py-24 gap-36">
         <div className="w-1/4">
           <div className="logo px-0">

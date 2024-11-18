@@ -9,67 +9,22 @@ import star from "@/public/assets/images/star.png";
 import lesson from "@/public/assets/images/lesson.png";
 import monitor from "@/public/assets/images/monitor.png";
 import history from "@/public/assets/images/history.png";
+import Navbar from "../component/navbar/navbar";
 
 export default function Home() {
   const [category, setCategory] = React.useState("View All →");
   return (
-    <div className="bg-white text-black">
-      <div className="text-white py-4 flex flex-col bg-gradient-60 from-[#303d65] via-[#2C313B] to-[#48372c] via-60% to-70% ">
-        <div className="flex justify-between item-enter p-3 px-16 ">
-          <div className="">
-            <span className="text-primaryYellow">475092+ </span>
-            No. of Students Counselled
-          </div>
-          <div className="">
-            <span className="text-primaryYellow">475092+ </span>
-            No. of Assisted in Placement
-          </div>
-        </div>
-        <hr className="bg-gray-50 h-[1px] opacity-15" />
-        <div className="flex flex-col justify-center items-between h-full">
-          <div className="flex justify-between items-center px-4">
-            <div className="logo">
-              <img
-                src="https://wayspire.in/wp-content/uploads/2023/09/new-logo-wayspire-copy-600x315-removebg-preview.png"
-                alt="Logo"
-                className="h-24"
-              />
-            </div>
-            <div className="redirection flex gap-4 item-center justify-center">
-              <NavLink url="/" title={"Home"} showArrow={true} />
-              <NavLink url="/courses" title={"Program"} showArrow={true} />
-              <NavLink url="/career" title={"Career"} showArrow={true} />
-              <NavLink
-                url="/contact-us"
-                title={"Contact Us"}
-                showArrow={false}
-              />
-              <NavLink url="about" title={"About"} showArrow={false} />
-              <NavLink url="blogs" title={"Blogs"} showArrow={false} />
-            </div>
-            <div className="auth flex gap-4 items-center">
-              <div className="search">
-                <SearchOutlined />
-              </div>
-              <div className="cart">
-                <ShoppingBagOutlined />
-              </div>
-              <div className="btn-auth bg-primaryYellow px-4 py-1 rounded-full font-semibold flex items-center gap-1 text-black">
-                Sign in →
-              </div>
-            </div>
-          </div>
-          {/* Banner part  */}
-          <div className=" px-24  flex flex-col text-center gap-4 justify-between items-center py-16">
-            <div className="text-4xl font-semibold">Course List</div>
-            <div className="flex gap-4">
-              <NavLink url="/" title="Home" />-<NavLink url="/" title="Pages" />
-              -<NavLink url="/courses" title="Course List" />
-            </div>
-          </div>
+    <div className="">
+      <Navbar />
+      {/* Banner part  */}
+      <div className=" px-24  flex flex-col text-center gap-4 justify-between items-center py-16 ">
+        <div className="text-4xl font-semibold">Course List</div>
+        <div className="flex gap-4">
+          <NavLink url="/" title="Home" />-<NavLink url="/" title="Pages" />
+          -<NavLink url="/courses" title="Course List" />
         </div>
       </div>
-      <div className="section1 text-center px-24 py-36">
+      <div className="section1 text-center px-24 py-16">
         <span className="text-white bg-secondaryBlue px-8 py-2 rounded-full">
           Design Course
         </span>
@@ -140,6 +95,7 @@ export default function Home() {
           )),
         ]}
       </div>
+      <hr />
       <footer className="flex px-24 py-24 gap-36 bg-black">
         <div className="w-1/4">
           <div className="logo px-0">
